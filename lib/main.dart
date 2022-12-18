@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'Dashboard/View/dashboard_view.dart';
 import 'images.dart';
 
 void main() {
@@ -80,8 +81,10 @@ class _MyHomePageState extends State<MyHomePage> {
                             children: [
                               Text("Pscd."),
                               InkWell(onTap: (){
-
-                              },child: Icon(Icons.menu_sharp))
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => Dashboard()),
+                                );                                },child: Icon(Icons.menu_sharp))
                             ],
                           ),
                           SizedBox(
